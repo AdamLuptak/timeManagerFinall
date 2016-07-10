@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">Working time manager</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_search">Search</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+    <string name="nav_item_home">Home</string>
+    <string name="nav_item_friends">All records</string>
+    <string name="nav_item_notifications">Setup</string>
+
+    <string name="title_work_times">Worktime - records</string>
+    <string name="title_setup">Setup</string>
+    <!-- navigation drawer item labels  -->
+    <string-array name="nav_drawer_labels">
+        <item>@string/nav_item_home</item>
+        <item>@string/nav_item_friends</item>
+        <item>@string/nav_item_notifications</item>
+    </string-array>
+
+    <string name="title_messages">Messages</string>
+    <string name="title_friends">Setup</string>
+    <string name="title_home">Home</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="arrivalTimeString">Add arrivalTime</string>
+    <string name="startServiceString">Start service</string>
+    <string name="stopServiceString">Stop service</string>
+    <string name="leaveTimeString">Add leaveTime</string>
+    <string name="showStatisticsString">Statistic</string>
+
+    <string name="productbutton_save_label">Save</string>
+    <string name="productbutton_delete_label">Delete</string>
+    <string name="productbutton_add_label">New</string>
+
+    <string name="list_product_code_format" formatted="false">%s</string>
+    <string name="list_product_description_format" formatted="false">%s</string>
+    <string name="list_product_price_format" formatted="false">%s</string>
+    <string name="list_product_work_time" formatted="false">%s</string>
+
+    <string name="productid_label">Code</string>
+    <string name="arrival_time_label">Work Time Period</string>
+    <string name="leave_time_label">LeaveTime</string>
+    <string name="day_of_week_label">dayOfWeek</string>
+    <string name="work_time_label">dayOfWeek</string>
+
+    <string name="datepicker">Change Date</string>
+    <string name="timepicker">Change Time</string>
+    <string name="arrivalSet">Arrival WorkTime</string>
+    <string name="leaveSet">Leave WorkTime</string>
+    <string name="workTimePeriod">30600000</string>string>
+
+    <string name="startService">Start service</string>
+    <string name="stopService">Stop service</string>
+
+
+    <string name="startGps">Start Gps</string>
+    <string name="stopGps">Stop Gps</string>
+
+    <string name="expectedLatitude">Expected latitude</string>
+    <string name="expectedLongitude">Expected longitude</string>
+
+    <string name="gpsTracking">Gps tracking</string>
+    <string name="notification_tracking">Notification tracking</string>
+
+    <string name="workTimePeriodText">WorkTimePeriod</string>
+
+    <string name="err_msg_workTime">Enter ##:## format</string>
+    <string name="err_msg_latitude">Enter only number</string>
+    <string name="err_msg_longitude">Enter only number</string>
+
+</resources>

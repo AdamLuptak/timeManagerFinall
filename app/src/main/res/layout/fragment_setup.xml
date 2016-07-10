@@ -1,0 +1,187 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/circle_background"
+    tools:context="com.adam.sk.workingtimemanager.Setup">
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal"
+        android:text="Setup"
+        android:textSize="45dp"
+        android:textStyle="bold" />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/workTime_period_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/workTimePeriod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/workTimePeriodText"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/longitude_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/longitude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/expectedLongitude"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/latitude_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/latitude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/expectedLatitude"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+
+    <at.markushi.ui.CircleButton
+        android:id="@+id/buttonUpdateWorkPeriod"
+        android:layout_width="65dip"
+        android:layout_height="65dip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="8dp"
+
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:onClick="onClick"
+        android:src="@drawable/fab_add" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/gpsTracking"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="32dp"
+        android:visibility="gone"
+        android:weightSum="10">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:text="@string/startGps" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:text="@string/stopGps" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout6"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="gone"
+        android:weightSum="10">
+
+        <Button
+            android:id="@+id/buttonStartGps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:text="@string/startService" />
+
+        <Button
+            android:id="@+id/buttonStoptGps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:text="@string/stopService" />
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/notificationCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:text="@string/notification_tracking"
+        android:layout_above="@+id/buttonUpdateWorkPeriod"
+        android:layout_toRightOf="@+id/linearLayout6"
+        android:layout_toEndOf="@+id/linearLayout6"
+        android:layout_marginBottom="125dp"
+        android:layout_marginLeft="15dp" />
+
+    <CheckBox
+        android:id="@+id/gpsTracking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:text="@string/gpsTracking"
+        android:layout_above="@+id/notificationCheck"
+        android:layout_toRightOf="@+id/linearLayout6"
+        android:layout_marginLeft="15dp" />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:max="300"
+        android:longClickable="false"
+        android:progress="5"
+        android:indeterminate="false"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/linearLayout6"
+        android:layout_toEndOf="@+id/linearLayout6"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="20 m"
+        android:id="@+id/distance"
+        android:layout_above="@+id/seekBar"
+        android:layout_toRightOf="@+id/linearLayout6"
+        android:layout_toEndOf="@+id/linearLayout6"
+        android:layout_marginLeft="25dp" />
+
+
+</RelativeLayout>
+
