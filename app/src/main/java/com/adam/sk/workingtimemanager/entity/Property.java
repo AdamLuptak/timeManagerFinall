@@ -23,4 +23,11 @@ public class Property extends SugarRecord implements Serializable {
     public void setWorkTimePeriod(long workTimePeriod) {
         this.workTimePeriod = workTimePeriod;
     }
+
+    @Override
+    public String toString() {
+        return "Property{" +
+                "workTimePeriod=" + workTimePeriod +
+                '}';
+    }
 }

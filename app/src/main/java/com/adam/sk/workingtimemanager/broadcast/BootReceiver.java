@@ -27,8 +27,8 @@ public class BootReceiver extends BroadcastReceiver {
     }
 
     private void setAlarmService(Context context) {
-        startUpdateService(context, UPDATE_SERVICE_ID, new Intent(context, UpdaterService.class), UpdaterService.ACTION_ALARM_RECEIVER, ALARM_PERIOD);
-        startUpdateService(context, LOCATION_SERVICE_ID, new Intent(context, LocationService.class), LocationService.ACTION_ALARM_RECEIVER, ALARM_PERIOD);
+   //     startUpdateService(context, UPDATE_SERVICE_ID, new Intent(context, UpdaterService.class), UpdaterService.ACTION_ALARM_RECEIVER, ALARM_PERIOD);
+    //    startUpdateService(context, LOCATION_SERVICE_ID, new Intent(context, LocationService.class), LocationService.ACTION_ALARM_RECEIVER, ALARM_PERIOD);
     }
 
     public void startUpdateService(Context context, int serviceID, Intent intent, String actionAlarmReceiver, int alarmPeriod) {

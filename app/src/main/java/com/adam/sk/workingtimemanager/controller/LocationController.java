@@ -14,6 +14,9 @@ public class LocationController {
     public static final String PROVIDER = "dummyprovider";
     public static final String DEF_VALUE_LAT = "0.0";
     public static final String DEF_VALUE_LON = "0.0";
+    public static final String IN_WORK = "IN_WORK";
+    public Boolean inWork;
+
 
     //defualt threshol 20 m
     private int thresholdDistance = 20;
@@ -21,6 +24,16 @@ public class LocationController {
 
     public LocationController(Context thisContext) {
         prefs = thisContext.getSharedPreferences(SHARED_PREFERENCES_NAME, Context.MODE_WORLD_READABLE);
+    }
+
+    public Boolean getInWork() {
+        return prefs.getBoolean(IN_WORK, false);
+    }
+
+    public void setInWork(Boolean inWork) {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putBoolean(IN_WORK, inWork);
+        editor.commit();
     }
 
     public void saveLocation(String lon, String lat) {

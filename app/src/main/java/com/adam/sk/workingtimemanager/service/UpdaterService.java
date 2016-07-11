@@ -41,6 +41,11 @@ public class UpdaterService extends IntentService {
     }
 
     @Override
+    public void onDestroy() {
+        super.onDestroy();
+    }
+
+    @Override
     public void onCreate() {
         mHandler = new Handler();
         super.onCreate();
